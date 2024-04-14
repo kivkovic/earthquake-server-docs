@@ -20,7 +20,7 @@ paths:
           schema:
             type: string
             enum: [address]
-          description: Retrieves reverse geocoding info from geoapify and sets the value into the address field
+          description: Retrieves reverse geocoding info from geoapify and sets the value into the address field.
       responses:
         '200':
           description: Successful operation
@@ -52,8 +52,7 @@ paths:
     put:
       tags:
         - earthquakes
-      summary: Fetch earthquake data from EMSC and store it into DB
-      description: If previously present event data was changed, the values will be updated
+      summary: Resyncs earthquake data by fetching earthquakes from EMSC and storing them in db. If stale entries are present in the db, they will be overwrittern
       responses:
         '200':
            description: Success
@@ -132,7 +131,7 @@ components:
       properties:
         id:
           type: string
-          example: 20240412_0000228
+          example: '20240412_0000228'
         mag:
           type: string
           example: 2.6
