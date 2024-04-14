@@ -61,7 +61,7 @@ paths:
     get:
       tags:
         - earthquakes
-      summary: Same as /earthquakes endpoint but with pagination
+      summary: Same as /earthquakes endpoint but with pagination. (Swagger doesn't support optional path params so this is listed as a separate documentation entry)
       parameters:
         - in: path
           name: page
