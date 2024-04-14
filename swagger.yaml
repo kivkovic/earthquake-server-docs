@@ -35,7 +35,7 @@ paths:
     get:
       tags:
         - earthquakes
-      summary: List earthquakes
+      summary: List earthquakes (optional filtering and sort)
       parameters:
         - $ref: '#/components/parameters/date_from'
         - $ref: '#/components/parameters/date_to'
@@ -108,7 +108,8 @@ components:
       name: sort
       schema:
         type: string
-      description: Sort results
+      description: 'Sort results. Syntax: comma-seperated list of "column_name order" values'
+      example: time desc,mag asc
   schemas:
     EarthquakeListResponse:
       type: object
